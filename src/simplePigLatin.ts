@@ -6,13 +6,21 @@ export function pigLatin(inputString: string): string {
   }
 
   let outPutString = inputString.split(" ");
-
-  let result = outPutString.map((word) => {
-    if (word.substring(1).match(/[aA-zZ]/)) {
-      word = word.substring(1) + word.charAt(0) + "ay";
+  return inputString.split(' ')
+  .map(x=> {
+    if(x.substring(1).match(/[aA-zZ]/)) {
+      x=`${x.substring(1)}${x.charAt(0)}ay`
     }
-    return word;
-  });
+   return x;
+  })
+   .join(' ')
  
-  return result.join(" ");
+  // let result = outPutString.map((word) => {
+  //   if (word.substring(1).match(/[aA-zZ]/)) {
+  //     word = word.substring(1) + word.charAt(0) + "ay";
+  //   }
+  //   return word;
+  // });
+ 
+  // return result.join(" ");
 }
