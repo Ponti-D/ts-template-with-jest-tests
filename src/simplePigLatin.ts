@@ -4,9 +4,7 @@ export function pigLatin(inputString: string): string {
   if (inputString.length === 0) {
     return "";
   }
-
-  let outPutString = inputString.split(" ");
-
+//comment dd
   let result = inputString
     .split(" ")
     .map((x) => {
